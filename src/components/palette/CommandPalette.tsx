@@ -48,6 +48,10 @@ export default function CommandPalette() {
 
   function go(to: string) {
     close();
+    if (to.startsWith("/#")) {
+      void navigate({ pathname: "/", hash: to.slice(1) });
+      return;
+    }
     void navigate(to);
   }
 

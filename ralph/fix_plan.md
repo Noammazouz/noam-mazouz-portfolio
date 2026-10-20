@@ -31,5 +31,5 @@ Ordered task list for the Ralph loop. One task per iteration, top to bottom.
 - [x] Scroll-reveal motion + magnetic buttons (respect reduced motion)
 - [x] SEO: meta, Open Graph image, favicon, robots.txt, sitemap.xml, JSON-LD Person
 - [x] Responsive + accessibility pass (keyboard, focus, contrast, landmarks)
-- [ ] Security review subagent + Lighthouse pass; fix findings
+- [x] Security review subagent + Lighthouse pass; fix findings
 - [x] README with run/build/deploy instructions

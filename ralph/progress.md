@@ -57,3 +57,10 @@ Append-only. Newest entries at the bottom.
 - CSS scroll-reveal via IntersectionObserver class toggle; `lift` hover on CTAs. Both honor reduced-motion (global CSS override).
 - Favicon, OG SVG, robots.txt, sitemap.xml, web manifest, richer Seo tags. Inline JSON-LD skipped to keep `script-src 'self'` (no hash-fragile inline script).
 - README. `npm run check` green (16 tests, 0 audit findings, guard OK).
+
+## 2026-10-20 - Browser verification + routing fix
+
+- Verified hero, work list + sticky preview, IncidentIQ case study, command palette, Looking For, 404, and a 390px mobile layout.
+- Fixed palette section jumps from case-study routes (`navigate({ pathname: "/", hash })`) and hash scroll after the home page mounts.
+- Security self-review: no innerHTML, https-only external links, CSP unchanged, no phone number, email split in source, cmdk uses native dialog (no Radix inline styles). Lighthouse CLI not installed locally; live Lighthouse can run after Netlify deploy.
+- `npm run check` green (17 tests).

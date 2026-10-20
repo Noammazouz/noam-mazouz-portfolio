@@ -6,12 +6,25 @@ export default function ScrollManager() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    const id = hash ? decodeURIComponent(hash.slice(1)) : "";
+
+    function scrollToHash() {
+      const target = id ? document.getElementById(id) : null;
       if (target) {
         target.scrollIntoView();
-        return;
+        return true;
       }
+      return false;
+    }
+
+    if (id) {
+      if (scrollToHash()) return;
+      const raf = window.requestAnimationFrame(() => {
+        if (!scrollToHash()) window.scrollTo(0, 0);
+      });
+      return () => {
+        window.cancelAnimationFrame(raf);
+      };
     }
     window.scrollTo(0, 0);
   }, [pathname, hash]);

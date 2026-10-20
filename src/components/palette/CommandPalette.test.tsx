@@ -14,4 +14,17 @@ describe("CommandPalette", () => {
     expect(screen.getByRole("option", { name: /copy email/i })).toBeInTheDocument();
     expect(screen.getByRole("option", { name: /open cv/i })).toBeInTheDocument();
   });
+
+  it("navigates from a case study to a home section", async () => {
+    const user = userEvent.setup();
+    renderRoute("/projects/incidentiq");
+    expect(
+      await screen.findByRole("heading", { level: 1, name: /incidentiq/i }),
+    ).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /open command palette/i }));
+    await user.click(screen.getByRole("option", { name: /^about/i }));
+    expect(
+      await screen.findByRole("heading", { level: 2, name: /engineer by degree/i }),
+    ).toBeInTheDocument();
+  });
 });
