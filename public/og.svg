@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Noam Mazouz, Software Developer">
+  <rect width="1200" height="630" fill="#0B0C0E"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#262A32" stroke-width="2"/>
+  <text x="96" y="160" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" letter-spacing="6" fill="#9A9EA8">SOFTWARE DEVELOPER</text>
+  <text x="96" y="310" font-family="ui-sans-serif, system-ui, sans-serif" font-size="96" font-weight="700" fill="#ECEBE6">NOAM</text>
+  <text x="96" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="96" font-weight="700" fill="none" stroke="#C6FF3D" stroke-width="3">MAZOUZ</text>
+  <text x="96" y="530" font-family="ui-monospace, monospace" font-size="24" fill="#9A9EA8">noam-mazouz.netlify.app</text>
+</svg>
