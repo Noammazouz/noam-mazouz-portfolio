@@ -55,6 +55,8 @@ export interface Project {
   architecture: { layer: string; detail: string }[];
   takeaways: string[];
   repo: string;
+  /** Public https video. Omitted when the project has none. */
+  video?: string;
   featured: boolean;
 }
 
