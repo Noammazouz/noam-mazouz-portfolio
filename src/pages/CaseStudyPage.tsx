@@ -127,7 +127,7 @@ export default function CaseStudyPage() {
         >
           <span className="label">Next case</span>
           <span className="text-4xl font-medium tracking-tight transition-colors group-hover:text-signal md:text-6xl">
-            {next.title} <span aria-hidden="true">-&gt;</span>
+            {next.title} <span aria-hidden="true">→</span>
           </span>
         </Link>
       )}

@@ -25,7 +25,7 @@ export default function Contact() {
               aria-hidden="true"
               className="ml-3 inline-block transition-transform group-hover:translate-x-2"
             >
-              -&gt;
+              →
             </span>
           </a>
 
@@ -54,7 +54,7 @@ export default function Contact() {
                 >
                   <span className="text-2xl md:text-3xl">{l.label}</span>
                   <span className="font-mono text-xs text-mute group-hover:text-signal">
-                    {l.handle} <span aria-hidden="true">-&gt;</span>
+                    {l.handle} <span aria-hidden="true">→</span>
                   </span>
                 </ExternalLink>
               </li>
