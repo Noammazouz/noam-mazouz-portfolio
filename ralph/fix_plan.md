@@ -13,7 +13,7 @@ Ordered task list for the Ralph loop. One task per iteration, top to bottom.
 ## Shell
 
 - [x] App shell: router (`/`, `/projects/:slug`, `*`), Nav, Footer, skip link, scroll restoration, per-route title/meta
-- [ ] Hero: scramble-text name, positioning line, CTA buttons, cursor-reactive DotGrid canvas
+- [x] Hero: scramble-text name, positioning line, CTA buttons, cursor-reactive DotGrid canvas
 
 ## Sections
 

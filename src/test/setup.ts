@@ -4,6 +4,9 @@ import { afterEach, vi } from "vitest";
 
 vi.spyOn(window, "scrollTo").mockImplementation(() => undefined);
 Element.prototype.scrollIntoView = vi.fn<Element["scrollIntoView"]>();
+HTMLCanvasElement.prototype.getContext = vi.fn(
+  () => null,
+) as typeof HTMLCanvasElement.prototype.getContext;
 
 afterEach(() => {
   cleanup();

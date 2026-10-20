@@ -35,3 +35,10 @@ Append-only. Newest entries at the bottom.
 - `motion` dependency was removed externally; all animation will be CSS + IntersectionObserver.
 - Tests: landmarks, lazy route, 404s, hardened external links. Gates green.
 
+
+## 2026-10-20 - Hero
+
+- ScrambleText (sr-only real text, aria-hidden visual; no setState-in-effect), DotGrid canvas (rAF, pauses off-screen / hidden tab, static under reduced motion, DPR capped at 2).
+- Outlined surname, terminal-style facts, CTAs to #work / #next, stack marquee (aria-hidden).
+- Gates green.
+
