@@ -19,3 +19,11 @@ Append-only. Newest entries at the bottom.
 
 - `scripts/guard.mjs`: fails on tracked documents, `private/`, `.env*`, secret patterns and Israeli phone numbers. Negative-tested (staged fake PDF + fake key -> exit 1).
 - `netlify.toml`: Node 22, SPA fallback, strict CSP (`'self'` only, no inline scripts), HSTS, nosniff, DENY framing, Permissions-Policy, COOP/CORP, immutable cache for `/assets/*`.
+
+## 2026-10-20 - Tokens + content
+
+- `@theme` tokens: ink / surface / line / paper / mute / signal (#C6FF3D), Space Grotesk + JetBrains Mono via `@fontsource-variable` (self-hosted, CSP-safe).
+- Blueprint grid body background, global reduced-motion override, `label` and `container-page` utilities.
+- `src/data`: profile (from CV, no phone), 6 projects (from GitHub READMEs), git-log style timeline. Email stored split and assembled at runtime.
+- Facts not in CV/README were removed rather than guessed (e.g. course names -> "Degree project"; No One Left team size taken from GitHub contributors).
+- Tests: data integrity (unique slugs, https-only links, timeline refs). Gates green.
