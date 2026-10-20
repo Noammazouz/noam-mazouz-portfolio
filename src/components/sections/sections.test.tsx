@@ -59,6 +59,10 @@ describe("case study", () => {
       "href",
       "https://github.com/Noammazouz/No-one-left",
     );
+    expect(screen.getByRole("link", { name: /watch/i })).toHaveAttribute(
+      "href",
+      "https://www.youtube.com/watch?v=DokEE1DdMGM",
+    );
     expect(screen.getByRole("link", { name: /next case/i })).toBeInTheDocument();
   });
 });

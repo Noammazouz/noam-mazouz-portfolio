@@ -13,6 +13,7 @@ describe("content data", () => {
     const urls = [
       ...Object.values(profile.links).map((l) => l.href),
       ...projects.map((p) => p.repo),
+      ...projects.flatMap((p) => (p.video ? [p.video] : [])),
     ];
     for (const url of urls) expect(new URL(url).protocol).toBe("https:");
   });

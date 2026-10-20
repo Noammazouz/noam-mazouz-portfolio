@@ -72,6 +72,7 @@ export const projects: Project[] = [
       "Systematic debugging and testing of AI behavior.",
     ],
     repo: `${GH}/No-one-left`,
+    video: "https://www.youtube.com/watch?v=DokEE1DdMGM",
     featured: true,
   },
   {

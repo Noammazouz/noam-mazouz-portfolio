@@ -69,6 +69,19 @@ export default function CaseStudyPage() {
             </ExternalLink>
           </dd>
         </div>
+        {project.video && (
+          <div>
+            <dt className="label">Video</dt>
+            <dd className="mt-1">
+              <ExternalLink
+                href={project.video}
+                className="text-signal underline-offset-4 hover:underline"
+              >
+                Watch
+              </ExternalLink>
+            </dd>
+          </div>
+        )}
       </dl>
 
       <div className="mt-8">
