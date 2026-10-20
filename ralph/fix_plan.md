@@ -4,9 +4,9 @@ Ordered task list for the Ralph loop. One task per iteration, top to bottom.
 
 ## Foundation
 
-- [ ] Scaffold React 19 + Vite + TS (strict), Tailwind v4, ESLint (ts, react-hooks, jsx-a11y), Prettier, Vitest + Testing Library
-- [ ] `npm run check` gate script + `scripts/guard.mjs` (secret scan, no tracked .pdf/.doc/.docx)
-- [ ] `netlify.toml`: build, Node 22, SPA fallback, security headers (CSP, nosniff, referrer, permissions, frame-ancestors)
+- [x] Scaffold React 19 + Vite + TS (strict), Tailwind v4, ESLint (ts, react-hooks, jsx-a11y), Prettier, Vitest + Testing Library
+- [x] `npm run check` gate script + `scripts/guard.mjs` (secret scan, no tracked .pdf/.doc/.docx)
+- [x] `netlify.toml`: build, Node 22, SPA fallback, security headers (CSP, nosniff, referrer, permissions, frame-ancestors)
 - [ ] Design tokens in `src/styles/index.css` (`@theme`), self-hosted fonts, base styles, reduced-motion handling
 - [ ] Typed content: `src/data/profile.ts`, `src/data/projects.ts`, `src/data/timeline.ts`
 
