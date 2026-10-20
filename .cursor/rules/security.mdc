@@ -1,0 +1,16 @@
+---
+description: Security rules for the portfolio - checked on every change
+alwaysApply: true
+---
+
+# Security checklist
+
+- Never commit secrets, tokens, `.env` files, or documents (`.pdf`, `.doc`, `.docx`). `scripts/guard.mjs` enforces this.
+- No `dangerouslySetInnerHTML`, `eval`, `new Function`, or `innerHTML` writes. Content is plain typed data rendered by React.
+- External links: `target="_blank"` always paired with `rel="noopener noreferrer"`. Only `https:` / `mailto:` URLs.
+- No third-party scripts, trackers, analytics, CDNs or remote fonts. Everything is served from `'self'`.
+- Keep the CSP in `netlify.toml` strict (`default-src 'self'`, no `'unsafe-eval'`, no inline scripts). If a change needs a CSP relaxation, stop and ask.
+- Personal data minimization: no phone number, no home address, no ID numbers. Email is rendered obfuscated (assembled at runtime) to resist scrapers.
+- Dependencies: only well-maintained packages; `npm audit --audit-level=high` must be clean; lockfile committed.
+- Clipboard and other browser APIs are feature-detected and fail gracefully.
+- No user input is sent anywhere (static site, no forms posting to third parties).

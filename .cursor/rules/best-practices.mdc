@@ -1,0 +1,32 @@
+---
+description: Engineering best practices for the portfolio (React + Vite + TS)
+alwaysApply: true
+---
+
+# Best practices
+
+## Code
+- TypeScript strict. No `any`, no `@ts-ignore`, no `eslint-disable` to silence real issues.
+- Function components + hooks only. Keep components small; one component per file in `src/components/`.
+- Personal content lives only in `src/data/*.ts` as typed data. Components never hard-code bio text, links or project facts.
+- Styling via Tailwind utilities and tokens defined in `src/styles/index.css` (`@theme`). No inline hex colors in components.
+- Prefer CSS for animation; use `motion` only where CSS can't. Every animation respects `prefers-reduced-motion`.
+- Lazy-load routes that are not the home page. Avoid adding dependencies unless they clearly beat ~50 lines of code.
+- Clean up effects (event listeners, rAF, observers) on unmount.
+
+## Accessibility
+- Semantic landmarks (`header`, `nav`, `main`, `section` with headings, `footer`), one `h1` per route.
+- Every interactive element is keyboard reachable with a visible focus style. Use `button` for actions, `a` for navigation.
+- Decorative canvas/visuals get `aria-hidden="true"`. Images have meaningful `alt` or `alt=""` if decorative.
+- Text contrast >= WCAG AA.
+
+## Performance
+- Keep the initial JS bundle small. No large animation/3D libraries. Self-host fonts (`@fontsource`), `font-display: swap`.
+- Canvas effects pause when off-screen or tab hidden, and are throttled to rAF.
+
+## Testing
+- Each section/page has a Vitest + Testing Library smoke test (renders, key text/links present, a11y-relevant roles).
+- `npm run check` must pass before a task is considered done.
+
+## Git
+- Conventional commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`). One task per commit.
