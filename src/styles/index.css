@@ -82,3 +82,22 @@
 @utility container-page {
   @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
 }
+
+@utility lift {
+  @apply transition-transform duration-300 ease-out-expo hover:-translate-y-0.5;
+}
+
+@layer components {
+  [data-reveal]:not([data-in]) {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  [data-reveal][data-in] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 700ms var(--ease-out-expo),
+      transform 700ms var(--ease-out-expo);
+  }
+}

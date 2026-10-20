@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import CommandPalette from "../palette/CommandPalette.tsx";
 import ScrollManager from "../ScrollManager.tsx";
 import Footer from "./Footer.tsx";
 import Nav from "./Nav.tsx";
@@ -14,6 +15,7 @@ export default function Layout() {
       </a>
       <ScrollManager />
       <Nav />
+      <CommandPalette />
       <main id="main" tabIndex={-1} className="pt-16 outline-none">
         <Outlet />
       </main>

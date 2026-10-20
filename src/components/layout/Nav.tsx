@@ -5,7 +5,7 @@ import ExternalLink from "../ui/ExternalLink.tsx";
 import { NAV_SECTIONS } from "./navSections.ts";
 
 export default function Nav() {
-  const { open } = usePalette();
+  const { open, isOpen } = usePalette();
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-line/60 bg-ink/80 backdrop-blur-md">
@@ -43,6 +43,9 @@ export default function Nav() {
           <button
             type="button"
             onClick={open}
+            aria-label="Open command palette"
+            aria-haspopup="dialog"
+            aria-expanded={isOpen}
             aria-keyshortcuts="Control+K Meta+K"
             className="flex items-center gap-2 border border-line px-3 py-1.5 font-mono text-xs text-mute transition-colors hover:border-paper hover:text-paper"
           >
@@ -54,7 +57,7 @@ export default function Nav() {
           </button>
           <ExternalLink
             href={profile.links.cv.href}
-            className="bg-signal px-3 py-1.5 font-mono text-xs font-semibold text-ink transition-opacity hover:opacity-85"
+            className="lift bg-signal px-3 py-1.5 font-mono text-xs font-semibold text-ink transition-opacity hover:opacity-85"
           >
             CV
           </ExternalLink>

@@ -57,7 +57,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/#work"
-                className="group flex items-center gap-3 bg-paper px-5 py-3 font-mono text-sm font-medium text-ink transition-colors hover:bg-signal"
+                className="group flex lift items-center gap-3 bg-paper px-5 py-3 font-mono text-sm font-medium text-ink transition-colors hover:bg-signal"
               >
                 See my work
                 <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">

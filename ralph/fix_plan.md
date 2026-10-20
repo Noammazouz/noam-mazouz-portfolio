@@ -17,19 +17,19 @@ Ordered task list for the Ralph loop. One task per iteration, top to bottom.
 
 ## Sections
 
-- [ ] About section (`01 / ABOUT`)
-- [ ] Selected Work list with cursor-follow preview (`02 / WORK`)
-- [ ] Case-study page `/projects/:slug` (lazy-loaded) + NotFound page
-- [ ] Journey timeline in `git log` style (`03 / JOURNEY`)
-- [ ] Stack and Skills section (`04 / STACK`)
-- [ ] What I'm Looking For section (`05 / NEXT`)
-- [ ] Contact section + obfuscated email + copy-to-clipboard (`06 / CONTACT`)
-- [ ] Command palette (Ctrl/Cmd+K) - navigate, open CV, copy email, socials
+- [x] About section (`01 / ABOUT`)
+- [x] Selected Work list with cursor-follow preview (`02 / WORK`)
+- [x] Case-study page `/projects/:slug` (lazy-loaded) + NotFound page
+- [x] Journey timeline in `git log` style (`03 / JOURNEY`)
+- [x] Stack and Skills section (`04 / STACK`)
+- [x] What I'm Looking For section (`05 / NEXT`)
+- [x] Contact section + obfuscated email + copy-to-clipboard (`06 / CONTACT`)
+- [x] Command palette (Ctrl/Cmd+K) - navigate, open CV, copy email, socials
 
 ## Polish
 
-- [ ] Scroll-reveal motion + magnetic buttons (respect reduced motion)
-- [ ] SEO: meta, Open Graph image, favicon, robots.txt, sitemap.xml, JSON-LD Person
-- [ ] Responsive + accessibility pass (keyboard, focus, contrast, landmarks)
+- [x] Scroll-reveal motion + magnetic buttons (respect reduced motion)
+- [x] SEO: meta, Open Graph image, favicon, robots.txt, sitemap.xml, JSON-LD Person
+- [x] Responsive + accessibility pass (keyboard, focus, contrast, landmarks)
 - [ ] Security review subagent + Lighthouse pass; fix findings
-- [ ] README with run/build/deploy instructions
+- [x] README with run/build/deploy instructions
