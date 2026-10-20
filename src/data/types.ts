@@ -59,9 +59,8 @@ export interface Project {
 }
 
 export interface TimelineEntry {
-  hash: string;
   date: string;
-  message: string;
+  title: string;
   body: string;
   tags: string[];
   projectSlug?: string;

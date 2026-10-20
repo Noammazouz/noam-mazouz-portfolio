@@ -6,11 +6,11 @@ export const profile: Profile = {
   role: "Software Developer",
   location: "Israel",
   tagline:
-    "Computer Science graduate building well-architected software - from game engines to AI tooling.",
+    "Computer Science graduate seeking a junior software development position.",
   intro:
     "I write clean, object-oriented systems in C++, Python, Java and TypeScript, and I stay calm when things break - a habit I picked up running a 24/7 intelligence operations shift.",
   about: [
-    "I just completed my B.Sc. in Computer Science at Hadassah Academic College (2023-2026). Over the degree I built games in C++, a data lake for big-data analytics, full-stack web apps in Node.js and Spring Boot, and an AI-assisted incident response tool.",
+    "I just completed my B.Sc. in Computer Science at Hadassah Academic College (2023-2026). Over the degree I built games in C++, a data lake for big-data analytics, and full-stack web apps in Node.js and Spring Boot.",
     "Before university I served as a Shift Manager at the Operations Center of the Israel Police Intelligence and Cyber (SIGINT) Division. Leading a team in real time, under pressure and with strict information-security standards, shaped how I approach engineering: understand the system, separate facts from assumptions, and make clear decisions.",
     "I enjoy the part of software where architecture meets reality - designing modules that stay clean as features pile up, debugging methodically, and shipping things people can actually use.",
   ],
@@ -44,24 +44,20 @@ export const profile: Profile = {
     },
   ],
   lookingFor: {
-    headline: "Looking for my first software development role.",
-    roles: [
-      "Software Developer (student / junior)",
-      "Backend or full-stack developer",
-      "C++ / systems developer",
-    ],
+    headline: "Seeking a junior software development position.",
+    roles: ["Junior software development position"],
     interests: [
-      "Backend and distributed systems",
-      "Developer tooling and AI-assisted engineering",
-      "Data platforms and analytics",
-      "Security-minded products",
+      "Algorithms and data structures",
+      "Operating systems and databases",
+      "Object-oriented systems",
     ],
     offer: [
-      "Solid CS fundamentals and clean OOP design",
-      "Leadership and decision-making under pressure",
-      "Fast learner who ships end-to-end",
+      "C++, C, Python, Java, TypeScript, and JavaScript",
+      "Well-architected, object-oriented systems",
+      "Teamwork, problem-solving, and working under pressure",
     ],
-    availability: "Available now - open to full-time and student positions in Israel or remote.",
+    availability:
+      "Strong foundation in algorithms, data structures, operating systems, and databases.",
   },
   skills: [
     {

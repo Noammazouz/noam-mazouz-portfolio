@@ -17,13 +17,10 @@ export default function Hero() {
       <DotGrid />
 
       <div className="relative container-page flex flex-1 flex-col justify-between gap-12 pt-10 pb-12 md:pt-16">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="label">
-            Portfolio <span className="text-signal">/</span> {new Date().getFullYear()}
-          </p>
+        <div className="flex justify-end">
           <p className="flex items-center gap-2 label text-paper">
             <span aria-hidden="true" className="size-2 animate-blink rounded-full bg-signal" />
-            Open to work
+            Seeking a junior position
           </p>
         </div>
 
@@ -61,7 +58,7 @@ export default function Hero() {
               >
                 See my work
                 <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
-                  -&gt;
+                  →
                 </span>
               </Link>
               <Link

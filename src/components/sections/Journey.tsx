@@ -9,12 +9,12 @@ export default function Journey() {
         index="03"
         label="Journey"
         id="journey-title"
-        title="git log --oneline my-path"
+        title="From a 24/7 operations desk to a computer science degree."
       />
 
       <ol className="relative ml-1 border-l border-line md:ml-[calc(25%+0.25rem)]">
         {timeline.map((entry, i) => (
-          <li key={entry.hash} className="relative pb-12 pl-8 last:pb-0 md:pl-12">
+          <li key={entry.title} className="relative pb-12 pl-8 last:pb-0 md:pl-12">
             <span
               aria-hidden="true"
               className={`absolute top-1.5 -left-[5px] size-[9px] rounded-full border ${
@@ -22,14 +22,9 @@ export default function Journey() {
               }`}
             />
             <p className="font-mono text-xs text-mute">
-              <span className="text-signal">commit {entry.hash}</span>
-              {i === 0 && <span className="ml-2 text-paper/70">(HEAD -&gt; main)</span>}
-              <span className="mx-2" aria-hidden="true">
-                |
-              </span>
               <time>{entry.date}</time>
             </p>
-            <h3 className="mt-2 text-xl font-medium md:text-2xl">{entry.message}</h3>
+            <h3 className="mt-2 text-xl font-medium md:text-2xl">{entry.title}</h3>
             <p className="mt-2 max-w-2xl leading-relaxed text-paper/75">{entry.body}</p>
             <div className="mt-3 flex flex-wrap items-center gap-2">
               {entry.tags.map((t) => (
@@ -42,7 +37,7 @@ export default function Journey() {
                   to={`/projects/${entry.projectSlug}`}
                   className="ml-2 font-mono text-xs text-signal underline-offset-4 hover:underline"
                 >
-                  view project -&gt;
+                  view project →
                 </Link>
               )}
             </div>

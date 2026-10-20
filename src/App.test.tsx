@@ -12,9 +12,9 @@ describe("routing", () => {
   });
 
   it("renders a case study page lazily", async () => {
-    renderRoute("/projects/incidentiq");
+    renderRoute("/projects/layover-explorer");
     expect(
-      await screen.findByRole("heading", { level: 1, name: /incidentiq/i }),
+      await screen.findByRole("heading", { level: 1, name: /layover explorer/i }),
     ).toBeInTheDocument();
   });
 

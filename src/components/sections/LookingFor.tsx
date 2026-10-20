@@ -4,8 +4,8 @@ import { profile } from "../../data/profile.ts";
 export default function LookingFor() {
   const { lookingFor } = profile;
   const columns = [
-    { title: "Roles", items: lookingFor.roles },
-    { title: "Interested in", items: lookingFor.interests },
+    { title: "Position", items: lookingFor.roles },
+    { title: "Foundation", items: lookingFor.interests },
     { title: "What I bring", items: lookingFor.offer },
   ];
 
@@ -52,7 +52,7 @@ export default function LookingFor() {
             to="/#contact"
             className="w-fit lift bg-ink px-6 py-4 font-mono text-sm text-paper transition-colors hover:bg-surface"
           >
-            Let&apos;s talk -&gt;
+            Let&apos;s talk →
           </Link>
         </div>
       </div>

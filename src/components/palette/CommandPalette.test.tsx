@@ -17,9 +17,9 @@ describe("CommandPalette", () => {
 
   it("navigates from a case study to a home section", async () => {
     const user = userEvent.setup();
-    renderRoute("/projects/incidentiq");
+    renderRoute("/projects/layover-explorer");
     expect(
-      await screen.findByRole("heading", { level: 1, name: /incidentiq/i }),
+      await screen.findByRole("heading", { level: 1, name: /layover explorer/i }),
     ).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /open command palette/i }));
     await user.click(screen.getByRole("option", { name: /^about/i }));

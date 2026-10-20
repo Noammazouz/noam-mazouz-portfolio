@@ -10,9 +10,9 @@ describe("home sections", () => {
     for (const name of [
       /engineer by degree/i,
       /selected work/i,
-      /git log/i,
+      /operations desk/i,
       /tools i reach for/i,
-      /first software development role/i,
+      /junior software development position/i,
       /let's build something/i,
     ]) {
       expect(screen.getByRole("heading", { level: 2, name })).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe("home sections", () => {
 
   it("renders the full timeline", () => {
     renderRoute("/");
-    const journey = screen.getByRole("region", { name: /git log/i });
+    const journey = screen.getByRole("region", { name: /operations desk/i });
     expect(within(journey).getAllByRole("listitem")).toHaveLength(timeline.length);
   });
 
@@ -44,7 +44,7 @@ describe("home sections", () => {
     const mail = within(contact).getByRole("link", { name: /@gmail\.com/i });
     expect(mail.getAttribute("href")).toMatch(/^mailto:.+@.+/);
     await userEvent.click(within(contact).getByRole("button", { name: /copy email/i }));
-    expect(writeText).toHaveBeenCalledWith(mail.textContent.replace(/->$/, "").trim());
+    expect(writeText).toHaveBeenCalledWith(mail.textContent.replace(/→$/, "").trim());
     expect(await within(contact).findByText(/copied/i)).toBeInTheDocument();
   });
 });

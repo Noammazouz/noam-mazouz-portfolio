@@ -4,37 +4,6 @@ const GH = "https://github.com/Noammazouz";
 
 export const projects: Project[] = [
   {
-    slug: "incidentiq",
-    title: "IncidentIQ",
-    tagline: "AI-powered incident response and root-cause analysis",
-    year: "2026",
-    context: "Degree project",
-    team: "With Ofek Cohen",
-    stack: ["React", "Vite", "Tailwind CSS", "FastAPI", "Python", "SQLite", "Google Gemini"],
-    summary:
-      "A tool that helps DevOps and SRE teams investigate production incidents. It turns raw logs, deployment notes and user complaints into a summary, a reconstructed timeline, ranked root-cause hypotheses and concrete next steps.",
-    problem:
-      "During an outage, engineers drown in noisy logs and jump to conclusions. AI can help, but only if its output is treated as a suggestion and the reasoning stays grounded in evidence.",
-    highlights: [
-      "Evidence-oriented UI that separates facts, assumptions, hypotheses and actions.",
-      "Cognitive bias detection - flags confirmation bias, post hoc reasoning and overconfidence in the analysis.",
-      "Timeline reconstruction with evidence sources for every event.",
-      "Interactive chat about an incident and exportable postmortems (Markdown / JSON) for engineers, managers and support.",
-      "Three pre-built scenarios: e-commerce checkout failure, university registration slowdown, banking API timeouts.",
-    ],
-    architecture: [
-      { layer: "Frontend", detail: "React + Vite + Tailwind single-page app" },
-      { layer: "API", detail: "FastAPI (Python) with SQLite persistence and Swagger docs" },
-      { layer: "AI", detail: "Google Gemini with documented, versioned prompts" },
-    ],
-    takeaways: [
-      "Designing prompts and UI so AI output stays auditable.",
-      "Keeping secrets out of the repo with env templates and a one-command Windows start script.",
-    ],
-    repo: `${GH}/IncidentIQ`,
-    featured: true,
-  },
-  {
     slug: "layover-explorer",
     title: "Layover Explorer",
     tagline: "Turn long layovers into city trips",

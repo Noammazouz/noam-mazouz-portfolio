@@ -63,7 +63,7 @@ export default function WorkList() {
                       aria-hidden="true"
                       className={`ml-3 inline-block text-signal transition-opacity ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
                     >
-                      -&gt;
+                      →
                     </span>
                   </span>
                 </Link>
