@@ -1,4 +1,6 @@
 import { profile } from "../../data/profile.ts";
+import { contactMarks } from "../icons/skillIcons.ts";
+import SkillMark from "../icons/SkillMark.tsx";
 import ExternalLink from "../ui/ExternalLink.tsx";
 
 export default function Footer() {
@@ -11,12 +13,20 @@ export default function Footer() {
         </p>
         <ul className="flex gap-6">
           <li>
-            <ExternalLink href={profile.links.github.href} className="hover:text-paper">
+            <ExternalLink
+              href={profile.links.github.href}
+              className="inline-flex items-center gap-2 hover:text-paper"
+            >
+              <SkillMark icon={contactMarks.github} className="size-3.5" />
               GitHub
             </ExternalLink>
           </li>
           <li>
-            <ExternalLink href={profile.links.linkedin.href} className="hover:text-paper">
+            <ExternalLink
+              href={profile.links.linkedin.href}
+              className="inline-flex items-center gap-2 hover:text-paper"
+            >
+              <SkillMark icon={contactMarks.linkedin} className="size-3.5" />
               LinkedIn
             </ExternalLink>
           </li>

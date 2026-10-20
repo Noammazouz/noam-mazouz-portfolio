@@ -5,8 +5,7 @@ export const profile: Profile = {
   firstName: "Noam",
   role: "Software Developer",
   location: "Israel",
-  tagline:
-    "Computer Science graduate seeking a junior software development position.",
+  tagline: "Computer Science graduate seeking a junior software development position.",
   intro:
     "I write clean, object-oriented systems in C++, Python, Java and TypeScript, and I stay calm when things break - a habit I picked up running a 24/7 intelligence operations shift.",
   about: [

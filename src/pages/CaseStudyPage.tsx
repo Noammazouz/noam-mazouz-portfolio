@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { Link, useParams } from "react-router";
 import Seo from "../components/Seo.tsx";
+import { iconFor } from "../components/icons/skillIcons.ts";
+import SkillMark from "../components/icons/SkillMark.tsx";
 import ExternalLink from "../components/ui/ExternalLink.tsx";
 import ProjectVisual from "../components/work/ProjectVisual.tsx";
 import { projects } from "../data/projects.ts";
@@ -28,7 +30,8 @@ export default function CaseStudyPage() {
       <Seo title={project.title} description={`${project.tagline}. ${project.summary}`} />
 
       <Link to="/#work" className="font-mono text-xs text-mute transition-colors hover:text-signal">
-        &lt;- cd ../work
+        <span aria-hidden="true">← </span>
+        Back
       </Link>
 
       <header className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-end">
@@ -117,11 +120,18 @@ export default function CaseStudyPage() {
         </Block>
         <Block label="Stack">
           <ul className="flex flex-wrap gap-2">
-            {project.stack.map((s) => (
-              <li key={s} className="border border-line px-3 py-1 font-mono text-xs">
-                {s}
-              </li>
-            ))}
+            {project.stack.map((s) => {
+              const icon = iconFor(s);
+              return (
+                <li
+                  key={s}
+                  className="flex items-center gap-2 border border-line px-3 py-1 font-mono text-xs"
+                >
+                  {icon ? <SkillMark icon={icon} className="size-3.5" /> : null}
+                  {s}
+                </li>
+              );
+            })}
           </ul>
         </Block>
         <Block label="Takeaways">

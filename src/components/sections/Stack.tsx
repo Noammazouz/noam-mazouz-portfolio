@@ -1,4 +1,6 @@
 import { profile } from "../../data/profile.ts";
+import { iconFor } from "../icons/skillIcons.ts";
+import SkillMark from "../icons/SkillMark.tsx";
 import SectionHeader from "../ui/SectionHeader.tsx";
 
 export default function Stack() {
@@ -21,19 +23,27 @@ export default function Stack() {
               <span>{group.title}</span>
               <span className="text-signal">{String(gi + 1).padStart(2, "0")}</span>
             </h3>
-            <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-lg">
-              {group.items.map((item) => (
-                <li key={item} className="transition-colors group-hover:text-paper">
-                  {item}
-                </li>
-              ))}
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {group.items.map((item) => {
+                const icon = iconFor(item);
+                return (
+                  <li
+                    key={item}
+                    className="flex items-center gap-2 border border-line px-3 py-2 text-sm text-paper/90 transition-colors group-hover:text-paper"
+                  >
+                    {icon ? <SkillMark icon={icon} /> : null}
+                    {item}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
       </div>
 
-      <p className="mt-8 font-mono text-xs text-mute">
-        Spoken: {profile.languages.map((l) => `${l.name} (${l.level})`).join(" / ")}
+      <p className="mt-10 font-mono text-lg text-paper md:text-xl">
+        <span className="text-mute">Spoken</span>{" "}
+        {profile.languages.map((l) => `${l.name} (${l.level})`).join(" / ")}
       </p>
     </section>
   );

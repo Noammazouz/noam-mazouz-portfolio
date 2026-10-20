@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { projects } from "../../data/projects.ts";
+import { iconFor } from "../icons/skillIcons.ts";
+import SkillMark from "../icons/SkillMark.tsx";
 import SectionHeader from "../ui/SectionHeader.tsx";
 import ProjectVisual from "./ProjectVisual.tsx";
 
@@ -47,14 +49,18 @@ export default function WorkList() {
                   <span className="col-start-2 text-mute md:col-start-auto">
                     {p.tagline}
                     <span className="mt-3 flex flex-wrap gap-2">
-                      {p.stack.slice(0, 3).map((s) => (
-                        <span
-                          key={s}
-                          className="border border-line px-2 py-0.5 font-mono text-[11px] text-paper/70"
-                        >
-                          {s}
-                        </span>
-                      ))}
+                      {p.stack.slice(0, 3).map((s) => {
+                        const icon = iconFor(s);
+                        return (
+                          <span
+                            key={s}
+                            className="inline-flex items-center gap-1.5 border border-line px-2 py-0.5 font-mono text-[11px] text-paper/70"
+                          >
+                            {icon ? <SkillMark icon={icon} className="size-3" /> : null}
+                            {s}
+                          </span>
+                        );
+                      })}
                     </span>
                   </span>
                   <span className="col-start-2 font-mono text-xs text-mute md:col-start-auto md:text-right">
