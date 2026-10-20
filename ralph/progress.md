@@ -27,3 +27,11 @@ Append-only. Newest entries at the bottom.
 - `src/data`: profile (from CV, no phone), 6 projects (from GitHub READMEs), git-log style timeline. Email stored split and assembled at runtime.
 - Facts not in CV/README were removed rather than guessed (e.g. course names -> "Degree project"; No One Left team size taken from GitHub contributors).
 - Tests: data integrity (unique slugs, https-only links, timeline refs). Gates green.
+
+## 2026-10-20 - App shell
+
+- Router: Layout (skip link, Nav, main, Footer, ScrollManager) with `/`, lazy `/projects/:slug`, `*` 404.
+- PaletteProvider + Ctrl/Cmd+K shortcut (UI comes later). ExternalLink enforces https + `noopener noreferrer`.
+- `motion` dependency was removed externally; all animation will be CSS + IntersectionObserver.
+- Tests: landmarks, lazy route, 404s, hardened external links. Gates green.
+

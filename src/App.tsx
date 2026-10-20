@@ -1,7 +1,13 @@
+import { BrowserRouter } from "react-router";
+import AppRoutes from "./AppRoutes.tsx";
+import PaletteProvider from "./components/palette/PaletteProvider.tsx";
+
 export default function App() {
   return (
-    <main>
-      <h1>Noam Mazouz</h1>
-    </main>
+    <BrowserRouter>
+      <PaletteProvider>
+        <AppRoutes />
+      </PaletteProvider>
+    </BrowserRouter>
   );
 }
