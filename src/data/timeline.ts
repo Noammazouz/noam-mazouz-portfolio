@@ -44,12 +44,6 @@ export const timeline: TimelineEntry[] = [
     projectSlug: "bomberman",
   },
   {
-    date: "Nov 2024",
-    title: "Bomberman in the terminal",
-    body: "First serious object-oriented project: a turn-based maze game in C++.",
-    tags: ["c++"],
-  },
-  {
     date: "2023",
     title: "Started the degree",
     body: "Hadassah Academic College: algorithms, data structures, operating systems, and databases.",

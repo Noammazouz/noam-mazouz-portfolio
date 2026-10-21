@@ -53,10 +53,10 @@ export default function Hero() {
             <p className="text-xl leading-snug text-balance md:text-2xl">{profile.tagline}</p>
             <div className="flex flex-wrap gap-3">
               <Link
-                to="/#work"
+                to="/#projects"
                 className="group flex lift items-center gap-3 bg-paper px-5 py-3 font-mono text-sm font-medium text-ink transition-colors hover:bg-signal"
               >
-                See my work
+                See my projects
                 <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
                   →
                 </span>

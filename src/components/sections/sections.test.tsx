@@ -10,7 +10,7 @@ describe("home sections", () => {
     renderRoute("/");
     for (const name of [
       /engineer by degree/i,
-      /selected work/i,
+      /^projects$/i,
       /operations desk/i,
       /tools i reach for/i,
       /junior software development position/i,
@@ -30,12 +30,19 @@ describe("home sections", () => {
 
   it("lists every project linking to its case study", () => {
     renderRoute("/");
-    const work = screen.getByRole("region", { name: /selected work/i });
+    const work = screen.getByRole("region", { name: /^projects$/i });
     for (const p of projects) {
-      expect(within(work).getByRole("link", { name: new RegExp(p.title, "i") })).toHaveAttribute(
-        "href",
-        `/projects/${p.slug}`,
-      );
+      const caseStudy = within(work)
+        .getAllByRole("link", { name: new RegExp(p.title, "i") })
+        .find((link) => link.getAttribute("href") === `/projects/${p.slug}`);
+      expect(caseStudy).toBeDefined();
+    }
+    for (const p of projects) {
+      const repos = within(work).getAllByRole("link", {
+        name: new RegExp(`GitHub, ${p.title}`, "i"),
+      });
+      expect(repos.length).toBeGreaterThan(0);
+      for (const link of repos) expect(link).toHaveAttribute("href", p.repo);
     }
   });
 
@@ -84,6 +91,6 @@ describe("case study", () => {
       "https://www.youtube.com/watch?v=DokEE1DdMGM",
     );
     expect(screen.getByRole("link", { name: /next case/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /^back$/i })).toHaveAttribute("href", "/#work");
+    expect(screen.getByRole("link", { name: /^back$/i })).toHaveAttribute("href", "/#projects");
   });
 });
