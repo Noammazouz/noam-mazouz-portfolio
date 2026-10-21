@@ -96,7 +96,7 @@ export default function CommandPalette() {
             ))}
           </Command.Group>
 
-          <Command.Group heading="Work" className="px-1 py-2 [&_[cmdk-group-heading]]:label">
+          <Command.Group heading="Projects" className="px-1 py-2 [&_[cmdk-group-heading]]:label">
             {projects.map((p) => (
               <Command.Item
                 key={p.slug}

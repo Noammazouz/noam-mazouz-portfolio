@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { projects } from "../../data/projects.ts";
 import { iconFor } from "../icons/skillIcons.ts";
 import SkillMark from "../icons/SkillMark.tsx";
+import ExternalLink from "../ui/ExternalLink.tsx";
 import SectionHeader from "../ui/SectionHeader.tsx";
 import ProjectVisual from "./ProjectVisual.tsx";
 
@@ -11,13 +12,12 @@ export default function WorkList() {
   const preview = projects[active] ?? projects[0];
 
   return (
-    <section aria-labelledby="work-title" id="work" className="container-page py-24 md:py-36">
-      <SectionHeader
-        index="02"
-        label="Work"
-        id="work-title"
-        title="Selected work from my degree - games, data, web and AI."
-      />
+    <section
+      aria-labelledby="projects-title"
+      id="projects"
+      className="container-page py-24 md:py-36"
+    >
+      <SectionHeader index="02" label="Projects" id="projects-title" title="Projects" />
 
       <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
         <ol className="border-b border-line">
@@ -34,7 +34,7 @@ export default function WorkList() {
                     setActive(i);
                   }}
                   data-active={isActive ? "true" : undefined}
-                  className="group grid grid-cols-[3rem_minmax(0,1fr)] items-baseline gap-x-4 gap-y-3 py-8 transition-colors md:grid-cols-[4rem_minmax(0,2fr)_minmax(0,2fr)_5rem] md:py-10"
+                  className="group grid grid-cols-[3rem_minmax(0,1fr)] items-baseline gap-x-4 gap-y-3 pt-8 pb-3 transition-colors md:grid-cols-[4rem_minmax(0,2fr)_minmax(0,2fr)_5rem] md:pt-10 md:pb-4 lg:py-10"
                 >
                   <span
                     className={`font-mono text-xs ${isActive ? "text-signal" : "text-mute group-hover:text-signal"}`}
@@ -73,14 +73,21 @@ export default function WorkList() {
                     </span>
                   </span>
                 </Link>
+                <ExternalLink
+                  href={p.repo}
+                  className="mb-6 ml-12 inline-block font-mono text-xs text-paper underline-offset-4 transition-colors hover:text-signal hover:underline md:ml-16 lg:hidden"
+                >
+                  GitHub
+                  <span className="sr-only">, {p.title}</span>
+                </ExternalLink>
               </li>
             );
           })}
         </ol>
 
         {preview && (
-          <aside className="hidden lg:sticky lg:top-24 lg:block" aria-hidden="true">
-            <ProjectVisual project={preview} index={active} />
+          <aside className="hidden lg:sticky lg:top-24 lg:block">
+            <ProjectVisual project={preview} index={active} showRepo />
             <p className="mt-5 text-sm leading-relaxed text-mute">{preview.summary}</p>
           </aside>
         )}

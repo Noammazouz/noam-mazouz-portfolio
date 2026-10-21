@@ -29,7 +29,10 @@ export default function CaseStudyPage() {
     <article className="container-page pt-12 pb-24 md:pt-20">
       <Seo title={project.title} description={`${project.tagline}. ${project.summary}`} />
 
-      <Link to="/#work" className="font-mono text-xs text-mute transition-colors hover:text-signal">
+      <Link
+        to="/#projects"
+        className="font-mono text-xs text-mute transition-colors hover:text-signal"
+      >
         <span aria-hidden="true">← </span>
         Back
       </Link>

@@ -11,7 +11,10 @@ describe("Hero", () => {
       </MemoryRouter>,
     );
     expect(screen.getByRole("heading", { level: 1, name: /noam\s*mazouz/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /see my work/i })).toHaveAttribute("href", "/#work");
+    expect(screen.getByRole("link", { name: /see my projects/i })).toHaveAttribute(
+      "href",
+      "/#projects",
+    );
     expect(screen.getByRole("link", { name: /looking for/i })).toHaveAttribute("href", "/#next");
   });
 });

@@ -1,6 +1,6 @@
 export const NAV_SECTIONS = [
   { id: "about", label: "About" },
-  { id: "work", label: "Work" },
+  { id: "projects", label: "Projects" },
   { id: "journey", label: "Journey" },
   { id: "stack", label: "Stack" },
   { id: "next", label: "Next" },
